@@ -63,7 +63,7 @@ class ViT(Model):
             LayerNormalization(epsilon=norm_eps),
             Dense(mlp_dim),
             Dropout(dropout),
-            Dense(num_classes, activation='softmax'),
+            Dense(num_classes, activation='relu'),
         ])
 
         self.last_layer_norm = LayerNormalization(epsilon=norm_eps)
